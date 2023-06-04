@@ -61,7 +61,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN mkdir -p $HOME/create3_ws/src
 WORKDIR $HOME/create3_ws/src
-RUN git clone -b asoragna/humble https://github.com/iRobotEducation/create3_sim.git
+RUN git clone -b humble https://github.com/iRobotEducation/create3_sim.git
 WORKDIR $HOME/create3_ws
 RUN apt-get update \
     && rosdep install --from-path src -yi --rosdistro humble \
